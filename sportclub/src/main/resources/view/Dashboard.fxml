@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ancMainLayout" prefHeight="749.0" prefWidth="798.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sportclub.sportclub.sportclub.controller.DashboardController">
+   <children>
+      <ImageView fitHeight="749.0" fitWidth="799.0">
+         <image>
+            <Image url="@../Images/mix-color-dark-purple-0hzlwzpjmpyxbms0.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="14.0" layoutY="66.0" prefHeight="156.0" prefWidth="234.0" style="-fx-background-color: #3C0A44;">
+         <children>
+            <Label layoutX="33.0" layoutY="114.0" text="Number of Members" textFill="#fff8f8">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblNumMembers" alignment="CENTER_RIGHT" layoutX="173.0" layoutY="12.0" prefHeight="51.0" prefWidth="53.0" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <ImageView fitHeight="83.0" fitWidth="84.0" layoutX="14.0" layoutY="37.0">
+               <image>
+                  <Image url="@../Images/multiple-users-silhouette.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="282.0" layoutY="66.0" prefHeight="156.0" prefWidth="234.0" style="-fx-background-color: #3C0A44;">
+         <children>
+            <Label layoutX="33.0" layoutY="114.0" text="Number of Coaches" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblNumCoach" alignment="CENTER_RIGHT" layoutX="174.0" layoutY="8.0" prefHeight="51.0" prefWidth="53.0" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <ImageView fitHeight="69.0" fitWidth="67.0" layoutX="14.0" layoutY="44.0">
+               <image>
+                  <Image url="@../Images/coach.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="543.0" layoutY="66.0" prefHeight="156.0" prefWidth="234.0" style="-fx-background-color: #3C0A44;">
+         <children>
+            <Label layoutX="110.0" layoutY="114.0" text="Total Income" textFill="#f8f8f8">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblNumMoney" alignment="TOP_RIGHT" layoutX="98.0" layoutY="8.0" prefHeight="51.0" prefWidth="124.0" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+            <ImageView fitHeight="69.0" fitWidth="67.0" layoutX="24.0" layoutY="44.0">
+               <image>
+                  <Image url="@../Images/money.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label fx:id="lblTime" alignment="CENTER_RIGHT" layoutX="471.0" layoutY="8.0" prefHeight="35.0" prefWidth="156.0" textAlignment="RIGHT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" alignment="CENTER_RIGHT" layoutX="649.0" layoutY="8.0" prefHeight="35.0" prefWidth="138.0" textAlignment="RIGHT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="sportclub2@localhost">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.53">
+    <root id="1">
+      <DefaultCasing>lower/lower</DefaultCasing>
+      <DefaultEngine>InnoDB</DefaultEngine>
+      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
+      <ServerVersion>5.7.44</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="carwash"/>
+    <schema id="3" parent="1" name="company"/>
+    <schema id="4" parent="1" name="enigmatic_hotel"/>
+    <schema id="5" parent="1" name="gemsystem"/>
+    <schema id="6" parent="1" name="information_schema"/>
+    <schema id="7" parent="1" name="kade"/>
+    <schema id="8" parent="1" name="kuppiya"/>
+    <schema id="9" parent="1" name="ll"/>
+    <schema id="10" parent="1" name="market"/>
+    <schema id="11" parent="1" name="mysql"/>
+    <schema id="12" parent="1" name="performance_schema"/>
+    <schema id="13" parent="1" name="sportclub"/>
+    <schema id="14" parent="1" name="sportclub2">
+      <Current>1</Current>
+    </schema>
+    <schema id="15" parent="1" name="supermarket"/>
+    <schema id="16" parent="1" name="sys"/>
+    <schema id="17" parent="1" name="teatransportcenter"/>
+    <schema id="18" parent="1" name="thogakade"/>
+    <table id="19" parent="14" name="coach">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="20" parent="14" name="member">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="21" parent="14" name="memberdetail">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="22" parent="14" name="payment">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <table id="23" parent="14" name="sport">
+      <Engine>InnoDB</Engine>
+      <CollationName>latin1_swedish_ci</CollationName>
+    </table>
+    <column id="24" parent="19" name="coachId">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>varchar(4)|0s</StoredType>
+    </column>
+    <column id="25" parent="19" name="name">
+      <Position>2</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="26" parent="19" name="address">
+      <Position>3</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="27" parent="19" name="phone">
+      <Position>4</Position>
+      <StoredType>int(10)|0s</StoredType>
+    </column>
+    <index id="28" parent="19" name="PRIMARY">
+      <ColNames>coachId</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="29" parent="19" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="30" parent="20" name="memberId">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>varchar(4)|0s</StoredType>
+    </column>
+    <column id="31" parent="20" name="name">
+      <Position>2</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="32" parent="20" name="address">
+      <Position>3</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="33" parent="20" name="nic">
+      <Position>4</Position>
+      <StoredType>varchar(12)|0s</StoredType>
+    </column>
+    <column id="34" parent="20" name="email">
+      <Position>5</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="35" parent="20" name="phone">
+      <Position>6</Position>
+      <StoredType>int(10)|0s</StoredType>
+    </column>
+    <index id="36" parent="20" name="PRIMARY">
+      <ColNames>memberId</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="37" parent="20" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="38" parent="21" name="membershipId">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>varchar(6)|0s</StoredType>
+    </column>
+    <column id="39" parent="21" name="sportId">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(4)|0s</StoredType>
+    </column>
+    <column id="40" parent="21" name="memberId">
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StoredType>varchar(4)|0s</StoredType>
+    </column>
+    <column id="41" parent="21" name="paymentStatus">
+      <Position>4</Position>
+      <StoredType>varchar(10)|0s</StoredType>
+    </column>
+    <column id="42" parent="21" name="joiningDate">
+      <Position>5</Position>
+      <StoredType>date|0s</StoredType>
+    </column>
+    <foreign-key id="43" parent="21" name="memberdetail_ibfk_1">
+      <ColNames>sportId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>sportId</RefColNames>
+      <RefTableName>sport</RefTableName>
+    </foreign-key>
+    <foreign-key id="44" parent="21" name="memberdetail_ibfk_2">
+      <ColNames>memberId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>memberId</RefColNames>
+      <RefTableName>member</RefTableName>
+    </foreign-key>
+    <index id="45" parent="21" name="PRIMARY">
+      <ColNames>membershipId</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="46" parent="21" name="sportId">
+      <ColNames>sportId</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="47" parent="21" name="memberId">
+      <ColNames>memberId</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="48" parent="21" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="49" parent="22" name="payId">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>varchar(4)|0s</StoredType>
+    </column>
+    <column id="50" parent="22" name="memberId">
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StoredType>varchar(4)|0s</StoredType>
+    </column>
+    <column id="51" parent="22" name="paymentAmount">
+      <Position>3</Position>
+      <StoredType>decimal(10)|0s</StoredType>
+    </column>
+    <column id="52" parent="22" name="paymentDate">
+      <Position>4</Position>
+      <StoredType>date|0s</StoredType>
+    </column>
+    <foreign-key id="53" parent="22" name="payment_ibfk_1">
+      <ColNames>memberId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>memberId</RefColNames>
+      <RefTableName>member</RefTableName>
+    </foreign-key>
+    <index id="54" parent="22" name="PRIMARY">
+      <ColNames>payId</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="55" parent="22" name="memberId">
+      <ColNames>memberId</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="56" parent="22" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="57" parent="23" name="sportId">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>varchar(4)|0s</StoredType>
+    </column>
+    <column id="58" parent="23" name="name">
+      <Position>2</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <column id="59" parent="23" name="payment">
+      <Position>3</Position>
+      <StoredType>decimal(10)|0s</StoredType>
+    </column>
+    <column id="60" parent="23" name="coachId">
+      <Position>4</Position>
+      <StoredType>varchar(4)|0s</StoredType>
+    </column>
+    <foreign-key id="61" parent="23" name="sport_ibfk_1">
+      <ColNames>coachId</ColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
+      <RefColNames>coachId</RefColNames>
+      <RefTableName>coach</RefTableName>
+    </foreign-key>
+    <index id="62" parent="23" name="PRIMARY">
+      <ColNames>sportId</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="63" parent="23" name="coachId">
+      <ColNames>coachId</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="64" parent="23" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>
