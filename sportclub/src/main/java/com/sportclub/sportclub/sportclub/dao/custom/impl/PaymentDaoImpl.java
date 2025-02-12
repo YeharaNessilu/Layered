@@ -102,7 +102,7 @@ public class PaymentDaoImpl implements PaymentDao {
 
     @Override
     public boolean pay(Payment payment) throws SQLException {
-        System.out.println("helo");
+
         return SQLUtil.execute(
                 "insert into  payment(payId, memberId, paymentAmount, paymentDate) VALUES (?, ?, ?, ?)",
                 payment.getPayId(),
